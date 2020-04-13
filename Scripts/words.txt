@@ -1,0 +1,12 @@
+Animal
+Food
+job
+Police
+Football
+Bag
+Hospital
+Python
+Boots
+Kindly
+Friendly
+Hashtag
