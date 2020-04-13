@@ -8,20 +8,7 @@ win_height = 700
 
 turtle.screensize(win_length, win_height)
 
-# def writt(w):
-#     text = turtle.Turtle()
-#     text2=turtle.Turtle()
-#     text2.setpos(15, 200)
-#     text.penup()
-#     text.setpos(-270, 200)
-#     text.fillcolor("white")
-#     # text.pencolor("black")
-#     # text.color("white")
-#     # text.color("gray")
-#     text.pendown()
-#     text.write("You guessed these letters: ", font=("Arial", 16, "normal"))
 
-    # text2.write(w,font=("Arial", 16, "italic"))
 wel=turtle.Turtle()
 wel.penup()
 wel.resizemode("user")
@@ -30,8 +17,8 @@ wel.setpos(-135,280)
 wel.color("purple")
 wel.write("Welcome to the Hangman Game ",font=("Calibri", 17, "bold"))
 wel.pendown()
+
 hang=turtle.Turtle()
-# hang.shape("classic")
 hang.resizemode("user")
 hang.shapesize(0.00005,0.000005,0.000005)
 hang.pensize(4)
@@ -58,9 +45,6 @@ text.setpos(-290, 200)
 text.resizemode("user")
 text.shapesize(0.00005,0.000005,0.000005)
 text.fillcolor("white")
-    # text.pencolor("black")
-    # text.color("white")
-    # text.color("gray")
 text.pendown()
 text.write("The letters you already used: ", font=("Arial", 14, "normal"))
 one=turtle.Turtle()
@@ -73,7 +57,6 @@ text2=turtle.Turtle()
 text3=turtle.Turtle()
 text4=turtle.Turtle()
 text5=turtle.Turtle()
-# text6=turtle.Turtle()
 
 text3.penup()
 text3.resizemode("user")
@@ -99,12 +82,6 @@ text2.shapesize(0.00005,0.000005,0.000005)
 text2.setpos(-20, 200)
 text2.pendown()
 
-# text6.penup()
-# text6.resizemode("user")
-# text6.shapesize(0.00005,0.000005,0.000005)
-# text6.setpos(-290, 210)
-# text6.pendown()
-
 f=random.choice(open('words.txt').read().split()).strip()
 
 print(list(f))
@@ -112,13 +89,15 @@ count=0
 listf=list(f)
 for i in listf:
     count+=1
+    
 print("The word has " +str(count)+" letters. You have 6 tries total!")
 cout=-1
 letters=[]
 length=len(letters)
-count=5
+count=0
 j=0
 hang=0
+
 for i in listf:
     while j<6:
         word = str(input("guess a letter:"))
